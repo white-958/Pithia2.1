@@ -1,0 +1,47 @@
+
+-------- Epeksergasia Vathmologias admin --------------
+
+File file = new File("testakis.txt");
+               try {
+
+                FileWriter fw = new FileWriter(file);
+                   Scanner sc = new Scanner(file);
+                   String line;
+                   //int j=0;
+                   while ((line=sc.nextLine())!=null) {
+
+                       String[] str =line.split("@");
+                       if(str[0].equals(VathmologiesPianakasMathimaton.getSelectedValue())){
+
+                                String newobj = str[0] + "@" + VathmosIsagogisMathimatos.getSelectedItem() + "\n";
+                                fw.write(newobj);   
+                               break;
+                           } 
+
+                    }
+		    sc.close();
+                fw.close();
+             }
+	     catch(IOException ex){
+                        
+                        }
+
+----------VATHMOLOGIES EMFANISI STON STUDENT SE JLABLE USER STORIE 2----------
+
+private void login() {
+
+        try {
+           String filename=username1.getText();
+        
+            File file = new File(filename);
+
+            sc = new Scanner(file);
+            while (sc.hasNextLine()) {
+                String[] str = sc.nextLine().split("@");
+                
+                    Jlable.setText("Μάθημα: "+str[0]+" Βαθμός" +str[1] ;
+                    
+                   
+                }}
+catch (IOException ex) {
+            }
